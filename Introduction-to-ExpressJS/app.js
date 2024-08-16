@@ -10,3 +10,10 @@ const port = 3000;
 // Middleware
 app.use(morgan('dev')); // Logging middleware
 app.use(bodyParser.json()); // JSON parsing middleware
+
+// Define routes
+app.get('/', (req, res) => {
+    res.status(200).send({
+        message: 'Hello World from ExpressJS!'
+    })
+})
